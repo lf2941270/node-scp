@@ -19,7 +19,7 @@ scp.send = function (options, cb) {
     options.file,
     (options.user == undefined ? '' : options.user+'@') + options.host + ':' + options.path,
   ];
-  if(options.password !== undefined) {
+  if(options.password !== undefined) { //optional password
     command = [
       'sshpass',
       '-p',
