@@ -23,7 +23,7 @@ scp.send = function (options, cb) {
     command = [
       'sshpass',
       '-p',
-      options.password
+      '\'' + options.password + '\''
     ].concat(command)
   }
   exec(command.join(' '), function (err, stdout, stderr) {
